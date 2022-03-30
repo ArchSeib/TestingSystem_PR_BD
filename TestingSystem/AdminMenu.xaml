@@ -1,0 +1,25 @@
+﻿<Window x:Class="TestingSystem.AdminMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestingSystem"
+        mc:Ignorable="d"
+        Title="Панель администратора" Height="250" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Click="UserDataEdit_Click" Grid.Column="1" Grid.Row="1" FontSize="20" BorderBrush="Black" BorderThickness="1">Изменение данных о пользователе</Button>
+        <Button Click="BdEdit_Click" Grid.Column="1" Grid.Row="3" FontSize="20" BorderBrush="Black" BorderThickness="1">Редактирование базы данных</Button>
+    </Grid>
+</Window>
