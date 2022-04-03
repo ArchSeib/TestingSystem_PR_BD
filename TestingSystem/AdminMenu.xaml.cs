@@ -19,9 +19,25 @@ namespace TestingSystem
     /// </summary>
     public partial class AdminMenu : Window
     {
-        public AdminMenu()
+        private Users _user;
+        public AdminMenu(Users user)
         {
             InitializeComponent();
+            _user = user;
+        }
+
+        private void UserDataEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditDate _editDate = new EditDate(_user);
+            _editDate.Show();
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void BdEdit_Click(object sender, RoutedEventArgs e)
+        {
+            EditTestQuestion _EditTestQuestion = new EditTestQuestion();
+            _EditTestQuestion.Show();
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

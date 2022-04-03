@@ -27,18 +27,66 @@ namespace TestingSystem
 
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
-            PanelControl _panelControl = new PanelControl();
-            _panelControl.Show();
+            if(TbLogin.Text == "")
+            {
+                MessageBox.Show("Вы не ввели логин");
+            }
+            else
+            {
+                if (TbPassword.Text == "")
+                {
+                    MessageBox.Show("Вы не ввели пароль");
+                }
+                else
+                {
+                    if (Connect.GetContext().Users.Any(a => a.Login == TbLogin.Text) == true)
+                    {
+                        var User = Connect.GetContext().Users.Where(a => a.Login == TbLogin.Text).First();
+                        if(User.Password==TbPassword.Text)
+                        {
+                            if(User.ID_Role==1)
+                            {
+                                PanelControl _panelControl = new PanelControl(User);
+                                _panelControl.Show();
+                                this.Visibility = Visibility.Collapsed;
+                            }
+                            if (User.ID_Role == 2)
+                            {
+                                AdminMenu _adminMenu = new AdminMenu(User);
+                                _adminMenu.Show();
+                                this.Visibility = Visibility.Collapsed;
+                            }
+                            MessageBox.Show("Вы авторизированы");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Вы ввели неправильный пароль");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Такого пользователя не существует");
+                    }
+                }
+            }
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-
+            TbLogin.Clear();
+            TbPassword.Clear();
         }
 
         private void Registr_Click(object sender, RoutedEventArgs e)
         {
+            Registration _registration = new Registration();
+            _registration.Show();
+            this.Visibility = Visibility.Collapsed;
+        }
 
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown(); ;
         }
     }
 }

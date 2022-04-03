@@ -20,12 +20,10 @@ namespace TestingSystem
             this.Questions = new HashSet<Questions>();
             this.Users_Tests = new HashSet<Users_Tests>();
         }
-
-        public int NumberTest;
+    
         public long ID_Test { get; set; }
         public string Name_Test { get; set; }
         public int Time_On_Test { get; set; }
-        public int Time_On_Quetion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Questions> Questions { get; set; }

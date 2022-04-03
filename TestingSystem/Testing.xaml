@@ -9,7 +9,7 @@
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10" HorizontalAlignment="Center">
             <TextBlock FontSize="14">Выше Ф.И.О:</TextBlock>
-            <TextBlock x:Name="TbFIO" FontSize="14" Margin="20,0,0,0">Ф.И.О:</TextBlock>
+            <TextBlock x:Name="LBFIO" FontSize="14" Margin="20,0,0,0">Ф.И.О:</TextBlock>
         </StackPanel>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -17,15 +17,15 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition Width="100"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock FontSize="16" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" TextAlignment="Center">Name test</TextBlock>
-            <TextBlock FontSize="16" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,50,0">Timer</TextBlock>
+            <TextBlock FontSize="16" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" TextAlignment="Center" x:Name="LBNameTest" >Name test</TextBlock>
+            <TextBlock FontSize="16" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,50,0" x:Name="LBPoint">0</TextBlock>
         </Grid>
-        <TextBox Width="700" Height="150" BorderBrush="Black" BorderThickness="2" Background="#FFC6C6C6" Margin="20"></TextBox>
+        <TextBox Width="700" Height="150" BorderBrush="Black" BorderThickness="2" Background="#FFC6C6C6" Margin="20" x:Name="TBQuestion" TextWrapping="Wrap" IsReadOnly="True"></TextBox>
         <TextBlock HorizontalAlignment="Center" FontSize="14">Выберите нужный ответ</TextBlock>
-        <RadioButton FontSize="16" Padding="0,-4,0,0" Width="700" Height="20" GroupName="Answer" Margin="0,5,0,0">Вариант ответа 1</RadioButton>
-        <RadioButton FontSize="16" Padding="0,-4,0,0" Width="700" Height="20" GroupName="Answer" Margin="0,5,0,0">Вариант ответа 2</RadioButton>
-        <RadioButton FontSize="16" Padding="0,-4,0,0" Width="700" Height="20" GroupName="Answer" Margin="0,5,0,0">Вариант ответа 3</RadioButton>
-        <RadioButton FontSize="16" Padding="0,-4,0,0" Width="700" Height="20" GroupName="Answer" Margin="0,5,0,0">Вариант ответа 4</RadioButton>
+        <RadioButton FontSize="16" Padding="0,-4,0,0" Width="700" Height="20" GroupName="Answer" Margin="0,5,0,0" x:Name="FirstAnswer">Вариант ответа 1</RadioButton>
+        <RadioButton FontSize="16" Padding="0,-4,0,0" Width="700" Height="20" GroupName="Answer" Margin="0,5,0,0" x:Name="SecondAnswer">Вариант ответа 2</RadioButton>
+        <RadioButton FontSize="16" Padding="0,-4,0,0" Width="700" Height="20" GroupName="Answer" Margin="0,5,0,0" x:Name="ThirdAnswer">Вариант ответа 3</RadioButton>
+        <RadioButton FontSize="16" Padding="0,-4,0,0" Width="700" Height="20" GroupName="Answer" Margin="0,5,0,0" x:Name="FouthAnswer">Вариант ответа 4</RadioButton>
         <Grid Margin="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>

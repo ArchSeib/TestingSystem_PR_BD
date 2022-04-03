@@ -19,8 +19,7 @@ namespace TestingSystem
         {
             this.Answers = new HashSet<Answers>();
         }
-
-        public int NumberQuestion;
+    
         public long ID_Questuion { get; set; }
         public long ID_Test { get; set; }
         public string Text_Question { get; set; }

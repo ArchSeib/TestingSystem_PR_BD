@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingSystem"
         mc:Ignorable="d"
-        Title="Панель администратора" Height="250" Width="600">
+        Title="Панель администратора" Height="50" Width="600" MinHeight="250" MinWidth="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80"></ColumnDefinition>

@@ -22,6 +22,7 @@
                 <Button Click="Clear_Click" FontSize="20" BorderBrush="#FF424242" BorderThickness="2" Width="100" Margin="10,0,0,0" Background="#FFE5E5E5">Очистить</Button>
             </StackPanel>
             <Button Click="Registr_Click" FontSize="20" BorderBrush="#FF424242" BorderThickness="2" Width="220" Margin="0,20,0,0" Background="#FFE5E5E5" HorizontalAlignment="Center">Регистрация</Button>
+            <Button Click="Exit_Click" FontSize="20" BorderBrush="#FF424242" BorderThickness="2" Width="220" Margin="0,20,0,0" Background="#FFE5E5E5" HorizontalAlignment="Center">Выход</Button>
         </StackPanel>
     </Grid>
 </Window>

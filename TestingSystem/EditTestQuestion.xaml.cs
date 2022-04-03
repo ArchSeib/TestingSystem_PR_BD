@@ -19,13 +19,34 @@ namespace TestingSystem
     /// </summary>
     public partial class EditTestQuestion : Window
     {
+        private List<Tests> testsList;
+        private List<Questions> questionList;
+        private Tests _tests;
+
         public EditTestQuestion()
         {
             InitializeComponent();
+            testsList = Connect.GetContext().Tests.ToList();
+            TBTest.Text = testsList[0].Name_Test;
+            TbTimeOnTest.Text = testsList[0].Time_On_Test.ToString();
+            questionList = Connect.GetContext().Questions.Where(a => a.ID_Test == testsList[0].ID_Test).ToList();
+            _tests = testsList[0];
+            TbNumberTest.Text = "1";
         }
 
         private void SaveTest_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                _tests.Name_Test = TBTest.Text;
+                _tests.Time_On_Test = Convert.ToInt32(TbTimeOnTest.Text);
+                Connect.GetContext().SaveChanges();
+                MessageBox.Show("Изменеия сохранены");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
 
         }
 

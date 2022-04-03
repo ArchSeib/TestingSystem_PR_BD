@@ -8,12 +8,10 @@
         Title="Редактирование базы данных" Height="620" Width="800">
     <StackPanel>
         <TextBlock FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="10">Тесты</TextBlock>
-        <TextBox FontSize="20" Width="700" Height="150" Background="#FFC2C2C2" BorderBrush="Black" TextWrapping="Wrap"></TextBox>
+        <TextBox FontSize="20" Width="700" Height="150" Background="#FFC2C2C2" BorderBrush="Black" TextWrapping="Wrap" x:Name="TBTest"></TextBox>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
             <TextBlock FontSize="20">Время на весь тест:</TextBlock>
-            <TextBox FontSize="20" x:Name="TbTimeOnTest" Width="50" TextAlignment="Center" Margin="10,0,20,0">0</TextBox>
-            <TextBlock FontSize="20">Время на вопрос:</TextBlock>
-            <TextBox FontSize="20" x:Name="TbTimeOnQuestion" Width="50" TextAlignment="Center" Margin="10,0,20,0">0</TextBox>
+            <TextBox FontSize="20" x:Name="TbTimeOnTest" Width="100" TextAlignment="Center" Margin="10,0,20,0">0</TextBox>
             <Button Click="SaveTest_Click" FontSize="20" Width="150" Margin="50,0,0,0">Сохранить</Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
