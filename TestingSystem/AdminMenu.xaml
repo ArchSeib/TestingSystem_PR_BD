@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestingSystem"
         mc:Ignorable="d"
-        Title="Панель администратора" Height="50" Width="600" MinHeight="250" MinWidth="600">
+        Title="Панель администратора" Height="250" Width="600" MinHeight="250" MinWidth="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80"></ColumnDefinition>
@@ -13,7 +13,7 @@
             <ColumnDefinition Width="80"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
             <RowDefinition ></RowDefinition>
             <RowDefinition Height="45"></RowDefinition>
             <RowDefinition ></RowDefinition>
@@ -21,5 +21,6 @@
         </Grid.RowDefinitions>
         <Button Click="UserDataEdit_Click" Grid.Column="1" Grid.Row="1" FontSize="20" BorderBrush="Black" BorderThickness="1">Изменение данных о пользователе</Button>
         <Button Click="BdEdit_Click" Grid.Column="1" Grid.Row="3" FontSize="20" BorderBrush="Black" BorderThickness="1">Редактирование базы данных</Button>
+        <Button Click="Exitt_Click" Grid.Column="1" Grid.Row="4" FontSize="20" BorderBrush="Black" BorderThickness="1" Width="100" Height="30">Выход</Button>
     </Grid>
 </Window>

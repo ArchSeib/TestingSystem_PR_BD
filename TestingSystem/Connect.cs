@@ -8,12 +8,12 @@ namespace TestingSystem
 {
     internal class Connect
     {
-        private static TestingSystemEntities0 bd;
-        public static TestingSystemEntities0 GetContext()
+        private static TestingSystemEntities bd;
+        public static TestingSystemEntities GetContext()
         {
             if (bd == null)
             {
-                bd = new TestingSystemEntities0();
+                bd = new TestingSystemEntities();
             }
             return bd;
         }

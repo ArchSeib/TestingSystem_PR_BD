@@ -35,9 +35,14 @@ namespace TestingSystem
 
         private void BdEdit_Click(object sender, RoutedEventArgs e)
         {
-            EditTestQuestion _EditTestQuestion = new EditTestQuestion();
+            EditTestQuestion _EditTestQuestion = new EditTestQuestion(_user);
             _EditTestQuestion.Show();
             this.Visibility = Visibility.Hidden;
+        }
+
+        private void Exitt_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

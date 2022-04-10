@@ -13,10 +13,10 @@ namespace TestingSystem
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TestingSystemEntities0 : DbContext
+    public partial class TestingSystemEntities : DbContext
     {
-        public TestingSystemEntities0()
-            : base("name=TestingSystemEntities0")
+        public TestingSystemEntities()
+            : base("name=TestingSystemEntities")
         {
         }
     
